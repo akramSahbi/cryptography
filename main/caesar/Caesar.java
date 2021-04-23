@@ -2,7 +2,7 @@ package main.caesar;
 
 import java.util.Scanner;
 
-public class caesar {
+public class Caesar {
     private static final int ASCII_LENGTH = 256;
     private static final String DELIMITER = "####################################################################################";
 
