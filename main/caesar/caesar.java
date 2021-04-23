@@ -78,6 +78,8 @@ public class caesar {
         System.out.println(DELIMITER);
     }
 
+    //calculating the score of a given plain text using the most common characters frequency score
+    // in the english language
     private static int calculateFrequencyAnalisisScore(String text) {
         String mostFrequentCharactersInEnglishLanguage = "aAeEiIoOnNtT";
         int frequencyScore = 0;
@@ -89,6 +91,7 @@ public class caesar {
         return frequencyScore;
     }
 
+    //calculating the index of the most frequent character
     private static int maxFrequencyKey(int[] frequencyArray) {
         int max = -1;
         int index = -1;
@@ -106,6 +109,8 @@ public class caesar {
         return index;
     }
 
+    //cracking caesar cipher using fast frequency analysis by analysing the most used character in the cipher text
+    //which is mapped to the space character
     private static void fastFrequencyAnalysis(String ciphertext) {
         System.out.println("#######     Cracking Caesar Cipher using fast frequency analysis attack      #######");
         final char SPACE = ' ';
