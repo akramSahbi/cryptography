@@ -23,6 +23,8 @@ public class caesar {
         System.out.println(DELIMITER);
         crackFrequencyAnalysis(ciphertext);
         System.out.println(DELIMITER);
+        fastFrequencyAnalysis(ciphertext);
+        System.out.println(DELIMITER);
     }
 
     //encrypt plain text using caesar cipher
@@ -90,13 +92,36 @@ public class caesar {
     private static int maxFrequencyKey(int[] frequencyArray) {
         int max = -1;
         int index = -1;
+        int previousMax = -1;
+        int previousMaxIndex = -1;
 
         for (int i = 0; i < frequencyArray.length; i++) {
             if (frequencyArray[i] > max) {
+                previousMax = max;
+                previousMaxIndex = index;
                 max = frequencyArray[i];
                 index = i;
             }
         }
         return index;
+    }
+
+    private static void fastFrequencyAnalysis(String ciphertext) {
+        System.out.println("#######     Cracking Caesar Cipher using fast frequency analysis attack      #######");
+        final char SPACE = ' ';
+        int spaceIndex = (int) SPACE;
+        int[] asciiFrequency = new int[ASCII_LENGTH];
+        for (int i = 0; i < ciphertext.length(); i++) {
+           char character = ciphertext.charAt(i);
+           int charIndex = (int) character;
+           asciiFrequency[charIndex]++;
+        }
+        int mostFrequentCipherCharacterIndex = maxFrequencyKey(asciiFrequency);
+        char mostFrequentCipherCharacter = (char) mostFrequentCipherCharacterIndex;
+        System.out.println("the most frequent cipher character is: " + mostFrequentCipherCharacter);
+        int key = Math.floorMod(mostFrequentCipherCharacter - spaceIndex, ASCII_LENGTH);
+        System.out.println("The key found using fast frequency analysis attack is: " + key);
+        System.out.println("message found: " + decrypt(ciphertext, key));
+        System.out.println(DELIMITER);
     }
 }
