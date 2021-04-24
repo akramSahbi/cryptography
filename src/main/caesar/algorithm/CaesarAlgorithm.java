@@ -1,9 +1,9 @@
-package src.main.caesar.algorithm;
+package main.caesar.algorithm;
 
 import java.util.Scanner;
 
-import static src.main.caesar.common.Commons.ASCII_LENGTH;
-import static src.main.caesar.common.Commons.DELIMITER;
+import static main.caesar.common.Commons.ASCII_LENGTH;
+import static main.caesar.common.Commons.DELIMITER;
 
 public class CaesarAlgorithm {
     public static void main(String[] args) {

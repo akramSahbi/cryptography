@@ -1,11 +1,11 @@
-package src.main.caesar.crack.bruteforce;
+package main.caesar.crack.bruteforce;
 
 import java.util.Scanner;
 
-import static src.main.caesar.algorithm.CaesarAlgorithm.decrypt;
-import static src.main.caesar.algorithm.CaesarAlgorithm.encrypt;
-import static src.main.caesar.common.Commons.ASCII_LENGTH;
-import static src.main.caesar.common.Commons.DELIMITER;
+import static main.caesar.common.Commons.ASCII_LENGTH;
+import static main.caesar.common.Commons.DELIMITER;
+import static main.caesar.algorithm.CaesarAlgorithm.decrypt;
+import static main.caesar.algorithm.CaesarAlgorithm.encrypt;
 
 public class BruteForceCaesar {
     public static void main(String[] args) {
@@ -22,11 +22,14 @@ public class BruteForceCaesar {
     }
 
     //cracking caesar cipher using brute force attack
-    public static void crackBruteForce(String ciphertext) {
+    public static String[] crackBruteForce(String ciphertext) {
+        String[] decryptedTextsForEachKey = new String[ASCII_LENGTH];
         System.out.println("#######     Cracking Caesar Cipher using brute force attack     #######");
         for (int key = 1; key < ASCII_LENGTH; key++) {
             String decryptedText = decrypt(ciphertext, key);
             System.out.println("using key: " + key + " : " + decryptedText);
+            decryptedTextsForEachKey[key] = decryptedText;
         }
+        return decryptedTextsForEachKey;
     }
 }

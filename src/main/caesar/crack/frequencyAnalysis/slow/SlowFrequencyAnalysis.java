@@ -1,10 +1,10 @@
-package src.main.caesar.crack.frequencyAnalysis.slow;
+package main.caesar.crack.frequencyAnalysis.slow;
 
 import java.util.Scanner;
 
-import static src.main.caesar.algorithm.CaesarAlgorithm.decrypt;
-import static src.main.caesar.algorithm.CaesarAlgorithm.encrypt;
-import static src.main.caesar.common.Commons.*;
+import static main.caesar.algorithm.CaesarAlgorithm.decrypt;
+import static main.caesar.algorithm.CaesarAlgorithm.encrypt;
+import static main.caesar.common.Commons.*;
 
 public class SlowFrequencyAnalysis {
     public static void main(String[] args) {
