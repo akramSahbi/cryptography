@@ -14,8 +14,9 @@ public class OneTimePad {
         System.out.println(DELIMITER);
         System.out.println("Enter text to encrypt using one time pad cipher:");
         String plaintext = scanner.nextLine();
-        System.out.println("Enter key numeric value:");
+        System.out.print("Random Key generated value: ");
         String key = generaterandomKey(plaintext.length());
+        System.out.println(key);
         String ciphertext = encrypt(plaintext, key);
         System.out.println("Encrypted using one time pad algorithm: " + ciphertext);
         String decryptedText = decrypt(ciphertext, key);
