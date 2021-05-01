@@ -1,4 +1,4 @@
-package main.des;
+package main.aes;
 
 import javax.crypto.*;
 import java.io.UnsupportedEncodingException;
@@ -9,25 +9,25 @@ import java.util.Scanner;
 
 import static main.caesar.common.Commons.DELIMITER;
 
-public class DataEncryptionStandard {
+public class AdvancedEncryptionStandard {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(DELIMITER);
-        System.out.println("Enter text to encrypt using data encryption standard cipher:");
+        System.out.println("Enter text to encrypt using advanced encryption standard cipher:");
         String plaintext = scanner.nextLine();
         System.out.print("Random Key generated value: ");
         SecretKey key = generateRandomKey();
         System.out.println(key.toString());
         String ciphertext = encrypt(plaintext, key);
-        System.out.println("Encrypted using data encryption standard algorithm: " + ciphertext);
+        System.out.println("Encrypted using advanced encryption standard algorithm: " + ciphertext);
         String decryptedText = decrypt(ciphertext, key);
-        System.out.println("decrypted back using data encryption standard cipher: " + decryptedText);
+        System.out.println("decrypted back using advanced encryption standard cipher: " + decryptedText);
     }
 
     public static SecretKey generateRandomKey() {
         SecretKey key = null;
         try {
-            key = KeyGenerator.getInstance("DES").generateKey();
+            key = KeyGenerator.getInstance("AES").generateKey();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
@@ -38,7 +38,7 @@ public class DataEncryptionStandard {
         byte[] cipherBytes = null;
 
         try {
-            Cipher cipher = Cipher.getInstance("DES");
+            Cipher cipher = Cipher.getInstance("AES");
             cipher.init(Cipher.ENCRYPT_MODE, key);
             byte[] plaintextBytes = plaintext.getBytes();
             cipherBytes = cipher.doFinal(plaintextBytes);
@@ -55,7 +55,7 @@ public class DataEncryptionStandard {
     public static String decrypt(String ciphertext, SecretKey key) {
         byte[] plaintextBytes = null;
         try {
-            Cipher cipher = Cipher.getInstance("DES");
+            Cipher cipher = Cipher.getInstance("AES");
             cipher.init(Cipher.DECRYPT_MODE, key);
             byte[] ciphertextBytes = ciphertext.getBytes();
             // to represent cipher text as string
