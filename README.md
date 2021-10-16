@@ -5,5 +5,5 @@ using common cryptography algorithms in JAVA and cracking them.
 - One Time Pad cipher: encryption and decryption.
 - Data encryption standard: encryption and decryption.
 - Advanced encryption standard: encryption and decryption.
- 
+- MD5 hashing
 * for each of the ciphers, plaintext can contain any ASCII character.
