@@ -1,4 +1,4 @@
-package main.caesar.common;
+package caesar.common;
 
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;

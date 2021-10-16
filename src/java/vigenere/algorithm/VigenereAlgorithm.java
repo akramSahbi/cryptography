@@ -1,11 +1,12 @@
-package main.vigenere.algorithm;
+package vigenere.algorithm;
 
-import main.caesar.algorithm.CaesarAlgorithm;
+
+import caesar.algorithm.CaesarAlgorithm;
 
 import java.util.Scanner;
 
-import static main.caesar.common.Commons.ASCII_LENGTH;
-import static main.caesar.common.Commons.DELIMITER;
+import static caesar.common.Commons.DELIMITER;
+
 
 public class VigenereAlgorithm {
     public static void main(String[] args) {

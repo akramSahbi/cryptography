@@ -1,15 +1,16 @@
-package main.caesar.crack.dictionary;
+package caesar.crack.dictionary;
 
-import main.caesar.common.Commons;
-import main.caesar.crack.bruteforce.BruteForceCaesar;
+import caesar.common.Commons;
+import caesar.crack.bruteforce.BruteForceCaesar;
+
 
 import java.util.List;
 import java.util.Scanner;
 
-import static main.caesar.common.Commons.ASCII_LENGTH;
-import static main.caesar.algorithm.CaesarAlgorithm.decrypt;
-import static main.caesar.algorithm.CaesarAlgorithm.encrypt;
-import static main.caesar.common.Commons.*;
+import static caesar.common.Commons.ASCII_LENGTH;
+import static caesar.algorithm.CaesarAlgorithm.decrypt;
+import static caesar.algorithm.CaesarAlgorithm.encrypt;
+import static caesar.common.Commons.*;
 
 public class DictionaryAttackCaesar {
     public static void main(String[] args) {

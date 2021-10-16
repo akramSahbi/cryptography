@@ -1,11 +1,11 @@
-package main.caesar.crack.bruteforce;
+package caesar.crack.bruteforce;
 
 import java.util.Scanner;
 
-import static main.caesar.common.Commons.ASCII_LENGTH;
-import static main.caesar.common.Commons.DELIMITER;
-import static main.caesar.algorithm.CaesarAlgorithm.decrypt;
-import static main.caesar.algorithm.CaesarAlgorithm.encrypt;
+import static caesar.common.Commons.ASCII_LENGTH;
+import static caesar.common.Commons.DELIMITER;
+import static caesar.algorithm.CaesarAlgorithm.decrypt;
+import static caesar.algorithm.CaesarAlgorithm.encrypt;
 
 public class BruteForceCaesar {
     public static void main(String[] args) {

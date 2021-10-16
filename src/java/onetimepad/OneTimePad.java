@@ -1,12 +1,13 @@
-package main.onetimepad;
+package onetimepad;
 
-import main.caesar.algorithm.CaesarAlgorithm;
+import caesar.algorithm.CaesarAlgorithm;
 
 import java.util.Random;
 import java.util.Scanner;
 
-import static main.caesar.common.Commons.ASCII_LENGTH;
-import static main.caesar.common.Commons.DELIMITER;
+import static caesar.common.Commons.ASCII_LENGTH;
+import static caesar.common.Commons.DELIMITER;
+
 
 public class OneTimePad {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package main.aes;
+package aes;
 
 import javax.crypto.*;
 import java.io.UnsupportedEncodingException;
@@ -7,7 +7,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 import java.util.Scanner;
 
-import static main.caesar.common.Commons.DELIMITER;
+import static caesar.common.Commons.DELIMITER;
+
 
 public class AdvancedEncryptionStandard {
     public static void main(String[] args) {
