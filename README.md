@@ -6,4 +6,5 @@ using common cryptography algorithms in JAVA and cracking them.
 - Data encryption standard: encryption and decryption.
 - Advanced encryption standard: encryption and decryption.
 - MD5 hashing
+- SHA 256 hashing
 * for each of the ciphers, plaintext can contain any ASCII character.
