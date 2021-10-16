@@ -14,7 +14,7 @@ public class MD5 {
         System.out.println(md5HashedLine);
     }
 
-    private static String bytesToHexString(byte[] bytes) {
+    public static String bytesToHexString(byte[] bytes) {
         StringBuilder result = new StringBuilder();
 
         for (byte b : bytes) {
